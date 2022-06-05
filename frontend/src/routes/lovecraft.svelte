@@ -38,3 +38,20 @@
 <p>
 	As constantes referências nas histórias de Lovecraft a horrores, monstros e divindades ancestrais acabaram por gerar algo análogo a uma mitologia, popularmente conhecida como Cthulhu Mythos, expressão criada após a morte do autor pelo escritor August Derleth, um dos muitos escritores a basearem suas histórias na mitologia criada por Lovecraft. O Cthulhu Mythos contém vários panteões de seres extra-dimensionais que reinaram sobre a Terra há milhões de anos. Estes seres eram tão poderosos que eram ou podiam ser considerados deuses. Alguns deles, inclusive, teriam sido os responsáveis pela criação da raça humana e teriam uma intervenção direta em toda a história do universo. Algumas das histórias de Lovecraft mostram a paixão deste por gatos, que o levou a criar a fictícia cidade de Ulthar. Esta última é mencionada na história "Em Sonhos, à Procura da Desconhecida Kadath".
 </p>
+
+<style>
+:global() h1 { 
+		color:#98971a;
+}
+:global() h2 { 
+		color:#d79921;
+}
+
+:global(.dark) h1 { 
+		color:#50fa7b;
+}
+
+:global(.dark) h2 { 
+		color:#ff79c6;
+}
+</style>

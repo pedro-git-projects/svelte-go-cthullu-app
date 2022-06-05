@@ -202,4 +202,18 @@
 		font-size: 2rem;
 		color: white;
 	}
+:global() h1 { 
+		color:#98971a;
+}
+:global() h2 { 
+		color:#d79921;
+}
+
+:global(.dark) h1 { 
+		color:#50fa7b;
+}
+
+:global(.dark) h2 { 
+		color:#ff79c6;
+}
 </style>

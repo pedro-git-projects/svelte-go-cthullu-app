@@ -162,22 +162,48 @@
 	<br>
 	<h2> Descrição </h2>
 	<ul class="list-group list-group-flush">
-		<li class="list-group-item bg-light">Força: {caracteristicas.investigator.description.str_description}</li>
-		<li class="list-group-item bg-light">Aparência: {caracteristicas.investigator.description.app_description}</li>
-		<li class="list-group-item bg-light">Constituição: {caracteristicas.investigator.description.con_description}</li>
-		<li class="list-group-item bg-light">Inteligência: {caracteristicas.investigator.description.int_description}</li>
-		<li class="list-group-item bg-light">Tamanho: {caracteristicas.investigator.description.siz_descrpition}</li>
-		<li class="list-group-item bg-light">Poder: {caracteristicas.investigator.description.pow_description}</li>
-		<li class="list-group-item bg-light">Educação: {caracteristicas.investigator.description.edu_description}</li>
-		<li class="list-group-item bg-light">Destreza: {caracteristicas.investigator.description.dex_description}</li>
+		<li class="list-group-item 
+		bg-light 
+		text-white">Força: {caracteristicas.investigator.description.str_description}</li>
+
+		<li class="list-group-item bg-light text-white">Aparência: {caracteristicas.investigator.description.app_description}</li>
+		<li class="list-group-item bg-light text-white">Constituição: {caracteristicas.investigator.description.con_description}</li>
+		<li class="list-group-item bg-light text-white">Inteligência: {caracteristicas.investigator.description.int_description}</li>
+		<li class="list-group-item bg-light text-white">Tamanho: {caracteristicas.investigator.description.siz_descrpition}</li>
+		<li class="list-group-item bg-light text-white">Poder: {caracteristicas.investigator.description.pow_description}</li>
+		<li class="list-group-item bg-light text-white">Educação: {caracteristicas.investigator.description.edu_description}</li>
+		<li class="list-group-item bg-light text-white">Destreza: {caracteristicas.investigator.description.dex_description}</li>
 	</ul>
 {:catch error}
 	<p style="color: red">{error.message}</p>
 {/await}
 
 <style>
+/* Sobreescrevendo a cor do botao */
 :global(.dark) button {
   		background-color: #bd93f9 !important;
 		border-color:#bd93f9 !important;
 }
+
+:global() h1 { 
+		color:#98971a;
+}
+:global() h2 { 
+		color:#d79921;
+}
+
+:global(.dark) h1 { 
+		color:#50fa7b;
+}
+
+:global(.dark) h2 { 
+		color:#ff79c6;
+}
+
+
+:global(.dark) .form-control:focus {
+        border-color: #28a745;
+        box-shadow: 0 0 0 0.2rem rgba(189, 147, 249, 0.5);
+    } 
+
 </style>

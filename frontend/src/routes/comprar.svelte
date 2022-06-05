@@ -246,5 +246,14 @@
   		background-color: #bd93f9 !important;
 		border-color:#bd93f9 !important;
 }
+
+:global() h1 { 
+		color:#98971a;
+}
+
+:global(.dark) h1 { 
+		color:#50fa7b;
+}
+
 </style>
 

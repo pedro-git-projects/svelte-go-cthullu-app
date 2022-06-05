@@ -49,11 +49,19 @@
 </div>
 
 <style>
-	h1 { 
+
+	:global() h1 { 
+
 		font-family: 'Macondo', cursive; 
+		color:#98971a;
 	}
+
+	:global(.dark) h1 { 
+		color:#50fa7b;
+	}
+
 	:global(.dark) button {
-  		background-color: #bd93f9 !important;
+		background-color: #bd93f9 !important;
 		border-color: #bd93f9 !important;
-}
+	}
 </style>

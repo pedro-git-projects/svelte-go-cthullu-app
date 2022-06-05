@@ -66,4 +66,12 @@
 <style>
 	img { opacity: .9; transition: all .2s }
 	img:hover { opacity: 1; transform: scale(1.04) }
+
+:global() h1 { 
+		color:#98971a;
+}
+
+:global(.dark) h1 { 
+		color:#50fa7b;
+}
 </style>
