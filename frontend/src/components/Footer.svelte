@@ -9,7 +9,7 @@
 <style>
 	footer {
 		color: var(--link-color);
-		min-height: 3em;
+		min-height: 4em;
 		font-size: 0.8em;
 	}
 </style>
