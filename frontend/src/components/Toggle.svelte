@@ -2,9 +2,11 @@
 	let darkMode = false;
 	function toggle() {
 		darkMode = !darkMode
+
+		/* Muda o tema do corpo */
 		window.document.body.classList.toggle('dark')
 
-
+		/* Muda o tema dos links */
 		let a = document.getElementsByTagName('a') 
 		for (let i = 0; i < a.length; i++) { 
 			if (!(a[i].classList.contains("dark"))) { 
@@ -14,6 +16,7 @@
 			} 
 		}  
 
+		/* Muda o tema da navbar */
 		let nav = document.getElementById('nav') 
 		if(nav.classList.contains("navbar-dark")) {
 			nav.classList.remove('navbar-dark') 
@@ -28,6 +31,7 @@
 		} 
 
 
+		/* Muda o tema da tabela */
 		let t = document.getElementById('tabela')
 		if(t.classList[0] === "table") {
 			t.classList.remove('table')
@@ -41,9 +45,11 @@
 
 <button class="ml-2" on:click={toggle}>
 	{#if darkMode }
-		&#9728;&#65039;	
+		<!-- emoji do sol  -->		
+		&#9728;&#65039; 	
 	{:else}
-		&#127769;		
+		<!-- emoji do da lua -->		
+		&#127769;	
 	{/if}
 </button>
 
