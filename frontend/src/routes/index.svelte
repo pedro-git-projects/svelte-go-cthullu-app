@@ -16,6 +16,8 @@
 			Bem vindo ao <b>Cthullu Online</b>, um site onde você
 			pode gerar investigadores para a sétima edição do jogo 
 			<i>Call of Cthullu</i> da Chaosium.			
+			<br>
+			<button type="button" class="btn btn-primary mt-3">Primary</button>		
 		</div>
 	</div>
 </div>

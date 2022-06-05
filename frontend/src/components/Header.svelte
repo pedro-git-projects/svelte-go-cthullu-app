@@ -30,8 +30,8 @@
 					</li>
 			
 				<li class="nav-item">
-					<div class="nav-link" to="/lovecraft">
-						<a sveltekit:prefetch href="/">Lovecraft</a>
+					<div class="nav-link" class:active={$page.url.pathname === "/lovecraft"} to="/lovecraft">
+						<a sveltekit:prefetch href="/lovecraft">Lovecraft</a>
 					</div>
 				</li>
 					<Toggle/>
