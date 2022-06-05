@@ -35,6 +35,13 @@
 						<a sveltekit:prefetch href="/lovecraft">Lovecraft</a>
 					</div>
 				</li>
+
+				<li class="nav-item">
+					<div class="nav-link" class:active={$page.url.pathname === "/fonte"} to="/fonte">
+						<a sveltekit:prefetch href="/fonte">Código</a>
+					</div>
+				</li>
+
 					<Toggle/>
 				</ul>
 			</div>
