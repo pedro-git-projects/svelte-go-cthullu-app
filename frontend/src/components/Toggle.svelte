@@ -43,7 +43,7 @@
 		/* Muda o tema das tabelas */
 		let t = document.getElementsByTagName('table') 
 		for (let i = 0; i < t.length; i++) { 
-			if (!(t[i].classList.contains("table-dark"))) { 
+			if (t[i].classList.contains("table-light")) { 
 				t[i].classList.remove("table-light") 
 				t[i].classList.add("table-dark") 
 			} else  {
@@ -63,6 +63,17 @@
 				lg[i].classList.add("bg-light") 
 			} 
 		}	
+
+		let d = document.getElementsByClassName('dot')
+		for (let i = 0; i < d.length; i++) {
+			if(d[i].classList.contains('bg-light')) {
+				d[i].classList.remove('bg-light')
+				d[i].classList.add('bg-dark')
+			} else {
+				d[i].classList.remove('bg-dark')
+				d[i].classList.add('bg-light')
+			}
+		}
 	}
 
 </script>

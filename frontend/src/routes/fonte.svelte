@@ -16,8 +16,8 @@
 	O backend da aplicação foi escrito em Go e consiste em uma <strong>RESTful API</strong>. Esta API expõe dois endpoints:	
 </p>
 
-<table id="tabela" class="table">
-	<thead class="thead-light">
+<table id="tabela" class="table table-light">
+	<thead class="thead">
 		<tr>
 			<th scope="col">Método</th>
 			<th scope="col">Padrão da URL</th>
