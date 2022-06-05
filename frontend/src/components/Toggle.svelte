@@ -5,16 +5,15 @@
 		window.document.body.classList.toggle('dark')
 
 
-/*		let a = document.getElementsByTagName('a') 
-		console.log(a)
+		let a = document.getElementsByTagName('a') 
 		for (let i = 0; i < a.length; i++) { 
-			if (!(a[i].classList.includes("dark"))) { 
+			if (!(a[i].classList.contains("dark"))) { 
 				a[i].classList.add("dark") 
 			} else  { 
 				a[i].classList.remove("dark") 
 			} 
 		}  
-*/
+
 		let nav = document.getElementById('nav') 
 		if(nav.classList.contains("navbar-dark")) {
 			nav.classList.remove('navbar-dark') 
