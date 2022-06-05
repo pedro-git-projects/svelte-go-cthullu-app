@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Cthullu Online - Lovecraft</title>
+	<title>Cthullhu Online - Lovecraft</title>
 </svelte:head>
 
 <script>

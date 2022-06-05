@@ -32,7 +32,6 @@
 
 		/* Muda o tema do footer */
 		let f = document.getElementById('meuFooter')
-		console.log(f)
 		if(f.classList.contains('bg-light')) {
 			f.classList.remove('bg-light')
 			f.classList.add('bg-dark')
@@ -41,20 +40,30 @@
 			f.classList.add('bg-light')
 		}
 
-		/* Muda o tema da tabela */
-		let t = document.getElementById('tabela')
-		if(t.classList[0] === "table") {
-			t.classList.remove('table')
-			t.classList.add('table-dark')
-		} else {
-			t.classList.remove('table-dark')
-			t.classList.add('table')
+		/* Muda o tema das tabelas */
+		let t = document.getElementsByTagName('table') 
+		for (let i = 0; i < t.length; i++) { 
+			if (!(t[i].classList.contains("table-dark"))) { 
+				t[i].classList.remove("table-light") 
+				t[i].classList.add("table-dark") 
+			} else  {
+				t[i].classList.remove("table-dark") 
+				t[i].classList.add("table-light") 
+			} 
 		}
 
-
-
+		/* Muda o tema de listas */
+		let lg = document.getElementsByClassName('list-group-item')
+		for (let i = 0; i < lg.length; i++) { 
+			if (lg[i].classList.contains('bg-light')) { 
+				lg[i].classList.remove("bg-light") 
+				lg[i].classList.add("bg-dark") 
+			} else  {
+				lg[i].classList.remove("bg-dark") 
+				lg[i].classList.add("bg-light") 
+			} 
+		}	
 	}
-
 
 </script>
 

@@ -1,9 +1,13 @@
+<svelte:head>
+	<title>Cthullhu Online - Home</title>
+</svelte:head>
+
 <script>
 	import cultist from  "../../static/home_image_3.png"
 	import { goto } from '$app/navigation'
 
 	const goToCriar = () => {
-		goto("/lovecraft")
+		goto("/criar")
 	}
 </script>
 
@@ -32,7 +36,7 @@
 			<button 
 	   			on:click="{goToCriar}"
 				type="button" 
-				class="btn btn-primary mt-3">Primary</button>
+				class="btn btn-primary mt-3">Criar</button>
 		</div>
 	</div>
 </div>

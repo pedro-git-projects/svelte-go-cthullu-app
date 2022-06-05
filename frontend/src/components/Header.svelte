@@ -23,9 +23,10 @@
 
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
-					<li class="nav-item" class:active={$page.url.pathname === '/'}>
+
+					<li class="nav-item" class:active={$page.url.pathname === '/criar'}>
 						<div class="nav-link">
-							<a sveltekit:prefetch href="/">Home</a>
+							<a sveltekit:prefetch href="/criar">Criar</a>
 						</div>
 					</li>
 			
