@@ -35,8 +35,8 @@
  <img src="https://cdnb.artstation.com/p/assets/images/images/012/675/039/large/richard-wright-cthulhu-ghoul.jpg?1535978919" alt="">
  <img src="https://cdnb.artstation.com/p/assets/images/images/042/321/845/large/pascal-blanche-hastur-low.jpg?1634179026" alt="">
  <img src="https://cdnb.artstation.com/p/assets/images/images/042/321/855/large/pascal-blanche-dagon-low.jpg?1634179056" alt="">
- <img src="https://cdnb.artstation.com/p/assets/images/images/009/166/927/large/daniel-zrom-danielzrom-nyarlatothep2017duststudio.jpg?1517487722" alt="">
  <img src="https://cdnb.artstation.com/p/assets/images/images/003/927/989/large/juan-pablo-corredor-cthulhu.jpg?1483648462" alt="">
+ <img src="https://cdnb.artstation.com/p/assets/images/images/000/421/203/large/tom-isaksen-cthulhu-by-tomisaksen-d6xvdt5.jpg?1421830343" alt="">
  <img src="https://cdna.artstation.com/p/assets/images/images/001/487/802/large/_-dofresh-_-hpl-was-right-03-def.jpg?1447276437" alt="">
  <img src="https://cdnb.artstation.com/p/assets/images/images/035/338/199/large/vladimir-somov-highresscreenshot00006.jpg?1614709680" alt="">
  <img src="https://cdna.artstation.com/p/assets/images/images/022/182/574/large/tj-foo-squidboat-small.jpg?1574415228" alt="">

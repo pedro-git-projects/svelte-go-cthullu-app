@@ -5,6 +5,7 @@
 
 		/* Muda o tema do corpo */
 		window.document.body.classList.toggle('dark')
+		let w = window.document.body.classList
 
 		/* Muda o tema dos links */
 		let a = document.getElementsByTagName('a') 
@@ -43,7 +44,7 @@
 		/* Muda o tema das tabelas */
 		let t = document.getElementsByTagName('table') 
 		for (let i = 0; i < t.length; i++) { 
-			if (t[i].classList.contains("table-light")) { 
+			if ( w.length > 0 && t[i].classList.contains("table-light")) { 
 				t[i].classList.remove("table-light") 
 				t[i].classList.add("table-dark") 
 			} else  {
@@ -55,7 +56,7 @@
 		/* Muda o tema de listas */
 		let lg = document.getElementsByClassName('list-group-item')
 		for (let i = 0; i < lg.length; i++) { 
-			if (lg[i].classList.contains('bg-light')) { 
+			if (w.length > 0 && lg[i].classList.contains('bg-light')) { 
 				lg[i].classList.remove("bg-light") 
 				lg[i].classList.add("bg-dark") 
 			} else  {
@@ -76,20 +77,9 @@
 			}
 		}
 
-		/* Muda o tema dos cards */
-		let c = document.getElementsByClassName('card')
-		console.log(c.classList)
-		for (let i = 0; i < d.length; i++) {
-			if(c[i].classList.contains('bg-light')) {
-				c[i].classList.remove('bg-light')
-				c[i].classList.add('bg-dark')
-			} else {
-				c[i].classList.remove('bg-dark')
-				c[i].classList.add('bg-light')
-			}
-		}	
+		/* Por serem objetos gerados dinâmicamente, 
+		o tema dos cards é alterado no próprio componente de forma global */
 	}
-
 </script>
 
 <button class="ml-2" on:click={toggle}>

@@ -34,8 +34,7 @@
 			<th scope="row">POST</th>
 			<td>/v1/criar</td>
 			<td>Cria um novo investigator</td>
-		</tr>
-	</tbody>
+		</tr> </tbody>
 </table>
 
 <p>
@@ -124,3 +123,6 @@ Foram utilizadas as seguintes bibliotecas:
 	}
 }`
 </script>
+
+<style>
+</style>
