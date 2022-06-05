@@ -4,29 +4,30 @@
 		darkMode = !darkMode
 		window.document.body.classList.toggle('dark')
 
-		/* 
-		let a = document.getElementsByTagName('a') 
-		 for (let i = 0; i < a.length; i++) { 
-			 if (a[i].classList.length === 0) { 
+
+/*		let a = document.getElementsByTagName('a') 
+		console.log(a)
+		for (let i = 0; i < a.length; i++) { 
+			if (!(a[i].classList.includes("dark"))) { 
 				a[i].classList.add("dark") 
-			} else  if(a[i].classList.value === "dark") { 
+			} else  { 
 				a[i].classList.remove("dark") 
 			} 
-	 } 
+		}  
+*/
+		let nav = document.getElementById('nav') 
+		if(nav.classList.contains("navbar-dark")) {
+			nav.classList.remove('navbar-dark') 
+			nav.classList.remove('bg-dark') 
+			nav.classList.add('navbar-light') 
+			nav.classList.add('bg-light') 
+		} else { 
+			nav.classList.remove('navbar-light') 
+			nav.classList.remove('bg-light') 
+			nav.classList.add('navbar-dark') 
+			nav.classList.add('bg-dark') 
+		} 
 
-		 let nav = document.getElementById('nav') 
-			if(nav.classList[2] === "navbar-dark") {
-				nav.classList.remove('navbar-dark') 
-				nav.classList.remove('bg-dark') 
-				nav.classList.add('navbar-light') 
-				nav.classList.add('bg-light') 
-			} else { 
-				nav.classList.remove('navbar-light') 
-				nav.classList.remove('bg-light') 
-				nav.classList.add('navbar-dark') 
-				nav.classList.add('bg-dark') 
-			} 
-		 */
 
 		let t = document.getElementById('tabela')
 		if(t.classList[0] === "table") {
