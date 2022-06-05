@@ -3,7 +3,6 @@
 </svelte:head>
 
 <script>
-	// TODO: Corrigir modo escuro dos elementod dinâmicos
 	let promise = Promise.resolve([])
 
 	let nome = ''
@@ -175,3 +174,10 @@
 {:catch error}
 	<p style="color: red">{error.message}</p>
 {/await}
+
+<style>
+:global(.dark) button {
+  		background-color: #bd93f9 !important;
+		border-color:#bd93f9 !important;
+}
+</style>

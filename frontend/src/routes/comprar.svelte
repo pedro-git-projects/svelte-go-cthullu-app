@@ -241,5 +241,10 @@
 		background-color: #e5e9f0;
 		color:#eceff4;
 }
+
+:global(.dark) button {
+  		background-color: #bd93f9 !important;
+		border-color:#bd93f9 !important;
+}
 </style>
 

@@ -13,8 +13,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col text-center mb-3">
-			<h1> Cthullu Online</h1>
+		<div class="col text-center mb-3"> <h1> Cthullu Online</h1>
 		</div>
 	</div>
 </div>
@@ -53,4 +52,8 @@
 	h1 { 
 		font-family: 'Macondo', cursive; 
 	}
+	:global(.dark) button {
+  		background-color: #bd93f9 !important;
+		border-color: #bd93f9 !important;
+}
 </style>

@@ -30,8 +30,8 @@
 	}
 
 	:global(body.dark) {
-		--bg-color: #E5E9F0;
-		--text-color: #434c5e;
-		--link-color: 434c5e;
+		--bg-color: #282a36;
+		--text-color: #f8f8f2;
+		--link-color: #f8f8f2;
 	}
 </style>
