@@ -3,30 +3,35 @@
 </svelte:head>
 
 <script>
+	// import * as yup from 'yup'
+
+
 	let promise = Promise.resolve([])
 
-	let nome = ''
-	let idade = '' 
-	let residencia = '' 
-	let nascimento = '' 
-	let ocupacao = ''  
+	let values = {
+		nome : '',
+		idade : '', 
+		residencia : '', 
+		nascimento : '' ,
+		ocupacao : '',
+	}	  
 
 	function submitForm() {
-		promise = fetchInvestigador()
+		promise = fetchInvestigador(values)
 	}
 
-	async function fetchInvestigador() {
+	async function fetchInvestigador(values) {
 		const response = await self.fetch('http://localhost:4000/v1/criar', {
 			method: "POST",
 			body: JSON.stringify({
-				nome,	
-				idade,
-				residencia,
-				nascimento,
-				ocupacao,
+				nome: values.nome,	
+				idade: parseInt(values.idade),
+				residencia: values.residencia,
+				nascimento: values.nascimento,
+				ocupacao: values.ocupacao,
 			})
 		})
-
+		console.log(values)
 		if (response.ok) {
 			return response.json()
 
@@ -43,19 +48,19 @@
 	<div class="form-group">
 
 		<label for="nome"> <strong> Nome </strong> </label>
-		<input class="form-control" bind:value="{nome}" id="nome" name="nome" type="text" />
+		<input class="form-control" bind:value="{values.nome}" id="nome" name="nome" type="text" />
 
 		<label for="idade"> <strong> Idade </strong> </label>
-		<input class="form-control" bind:value="{idade}" id="idade" name="idade" type="number" />
+		<input class="form-control" bind:value="{values.idade}" id="idade" name="idade" type="number" />
 
 		<label for="residencia"> <strong> Residência </strong> </label>
-		<input class="form-control" bind:value="{residencia}" id="residencia" name="residencia" type="text" />
+		<input class="form-control" bind:value="{values.residencia}" id="residencia" name="residencia" type="text" />
 
 		<label for="nascimento"> <strong> Nascimento </strong> </label>
-		<input class="form-control" bind:value="{nascimento}" id="nascimento" name="nascimento" type="text" />
+		<input class="form-control" bind:value="{values.nascimento}" id="nascimento" name="nascimento" type="text" />
 
 		<label for="ocupacao"> <strong> Ocupação </strong> </label>
-		<input class="form-control" bind:value="{ocupacao}" id="ocupacao" name="ocupacao" type="text" />
+		<input class="form-control" bind:value="{values.ocupacao}" id="ocupacao" name="ocupacao" type="text" />
 
 	</div>
 	<br />
@@ -179,34 +184,34 @@
 {/await}
 
 <style>
-/* Sobreescrevendo a cor do botao */
-:global(.dark) button {
-  		background-color: #bd93f9 !important;
+	/* Sobreescrevendo a cor do botao */
+	:global(.dark) button {
+		background-color: #bd93f9 !important;
 		border-color:#bd93f9 !important;
-}
+	}
 
-:global() h1 { 
+	:global() h1 { 
 		color:#98971a;
-}
-:global() h2 { 
+	}
+	:global() h2 { 
 		color:#d79921;
-}
+	}
 
-:global(.dark) h1 { 
+	:global(.dark) h1 { 
 		color:#50fa7b;
-}
+	}
 
-:global(.dark) h2 { 
+	:global(.dark) h2 { 
 		color:#ff79c6;
-}
+	}
 
 
-:global(.dark) .form-control:focus {
-        border-color: #28a745;
-        box-shadow: 0 0 0 0.2rem rgba(189, 147, 249, 0.5);
-} 
+	:global(.dark) .form-control:focus {
+		border-color: #28a745;
+		box-shadow: 0 0 0 0.2rem rgba(189, 147, 249, 0.5);
+	} 
 
-:global(.dark) .form-control {
-	background-color:#f8f8f2;
-}
+	:global(.dark) .form-control {
+		background-color:#f8f8f2;
+	}
 </style>
