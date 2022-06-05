@@ -195,7 +195,7 @@
 	<div class="cart-list">
 		{#each cart as item }
 			{#if item.quantity > 0}
-				<div class="card">
+				<div class="card bg-light">
 					<div class="text-center">
 						<img style="width: 12em;" class="mb-2" src={item.image} alt={item.name}/>
 					</div>			
@@ -233,8 +233,13 @@
 	@media (min-width: 1200px) {  
 	}
 	:global(.dark) .card-body {
-		background-color: #282828;
-		color:#FFFFFF;
+		background-color: #4c566a;
+		color:#eceff4;
 	}
+
+:global(.dark) .card {
+		background-color: #e5e9f0;
+		color:#eceff4;
+}
 </style>
 

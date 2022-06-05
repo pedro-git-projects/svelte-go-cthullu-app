@@ -16,10 +16,22 @@
 
 
 <style>
-	/* :global(.dark) { */
-	/* 	background-color: #282828; */	
-	/* } */
-	/* :global(body) { */
-	/* 	background-color: #FFFFFF; */
-	/* } */
+:root{
+		--bg-color: #282828;
+		--text-color: #fbf1c7;
+		--link-color: #fbf1c7;
+		--bootstrap-nav: #fbf1c7;
+	}
+
+	:global(body) {
+		background: var(--bg-color);
+		color: var(--text-color);
+		transition: background-color 0.3s
+	}
+
+	:global(body.dark) {
+		--bg-color: #E5E9F0;
+		--text-color: #434c5e;
+		--link-color: 434c5e;
+	}
 </style>

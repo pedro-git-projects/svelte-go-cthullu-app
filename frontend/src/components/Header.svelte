@@ -71,31 +71,19 @@
 		font-family: 'Macondo', cursive;
 	}
 
-	:root{
-		--bg-color: #FFFFFF;
-		--text-color: #000000;
-		--link-color: #000000;
-		--bootstrap-nav: #212529;
-	}
-
-	:global(body) {
-		background: var(--bg-color);
-		color: var(--text-color);
-		transition: background-color 0.3s
-	}
-
-	:global(body.dark) {
-		--bg-color: #000000;
-		--text-color: #FFFFFF;
-	}
-
+	
 	:global(a) {
 		color: var(--link-color);
 		text-decoration: none;
 	}
 
 	:global(a.dark) {
-		color: #000000;
+		color: #2e3440;
 		text-decoration: none;
 	}
+
+	:global(.dark) .navbar-toggler-icon {
+		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");	
+	}
+
 </style>
