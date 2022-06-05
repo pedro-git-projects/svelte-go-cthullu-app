@@ -64,6 +64,7 @@
 			} 
 		}	
 
+		/* Muda o tema dos pontos do carrossel */
 		let d = document.getElementsByClassName('dot')
 		for (let i = 0; i < d.length; i++) {
 			if(d[i].classList.contains('bg-light')) {
@@ -74,6 +75,19 @@
 				d[i].classList.add('bg-light')
 			}
 		}
+
+		/* Muda o tema dos cards */
+		let c = document.getElementsByClassName('card')
+		console.log(c.classList)
+		for (let i = 0; i < d.length; i++) {
+			if(c[i].classList.contains('bg-light')) {
+				c[i].classList.remove('bg-light')
+				c[i].classList.add('bg-dark')
+			} else {
+				c[i].classList.remove('bg-dark')
+				c[i].classList.add('bg-light')
+			}
+		}	
 	}
 
 </script>

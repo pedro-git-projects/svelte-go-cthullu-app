@@ -14,3 +14,12 @@
 </div>
 <Footer/>
 
+
+<style>
+	/* :global(.dark) { */
+	/* 	background-color: #282828; */	
+	/* } */
+	/* :global(body) { */
+	/* 	background-color: #FFFFFF; */
+	/* } */
+</style>
