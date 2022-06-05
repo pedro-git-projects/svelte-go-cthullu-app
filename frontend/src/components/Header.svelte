@@ -47,7 +47,12 @@
 						<a sveltekit:prefetch href="/comprar">Produtos</a>
 					</div>
 				</li>
-				
+
+				<li class="nav-item">
+					<div class="nav-link" class:active={$page.url.pathname === "/galeria"} to="/galeria">
+						<a sveltekit:prefetch href="/galeria">Galeria</a>
+					</div>
+				</li>				
 				<li class="nav-item">
 					<div class="nav-link" class:active={$page.url.pathname === "/fonte"} to="/fonte">
 						<a sveltekit:prefetch href="/fonte">Código</a>
