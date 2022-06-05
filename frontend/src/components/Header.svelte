@@ -4,7 +4,7 @@
 </script>
 
 <header>
-	<nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container-fluid">
 			<div class="navbar-brand">
 				<a sveltekit:prefetch href="/">Cthullu Online</a>
@@ -49,7 +49,7 @@
 	:root{
 		--bg-color: #FFFFFF;
 		--text-color: #000000;
-		--link-color: #FFFFFF;
+		--link-color: #000000;
 		--bootstrap-nav: #212529;
 	}
 

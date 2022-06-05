@@ -30,6 +30,16 @@
 			nav.classList.add('bg-dark') 
 		} 
 
+		/* Muda o tema do footer */
+		let f = document.getElementById('meuFooter')
+		console.log(f)
+		if(f.classList.contains('bg-light')) {
+			f.classList.remove('bg-light')
+			f.classList.add('bg-dark')
+		} else {
+			f.classList.remove('bg-dark')
+			f.classList.add('bg-light')
+		}
 
 		/* Muda o tema da tabela */
 		let t = document.getElementById('tabela')
@@ -40,7 +50,12 @@
 			t.classList.remove('table-dark')
 			t.classList.add('table')
 		}
+
+
+
 	}
+
+
 </script>
 
 <button class="ml-2" on:click={toggle}>

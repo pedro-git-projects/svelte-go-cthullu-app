@@ -2,14 +2,13 @@
 	let ano = new Date().getFullYear()
 </script>
 
-<footer class="d-flex align-items-center justify-content-center mt-5">
+<footer id="meuFooter" class="d-flex align-items-center justify-content-center mt-5 bg-light">
 	Copyright &copy; { ano }
 </footer>
 
 <style>
 	footer {
-		background: black;
-		color: white;
+		color: var(--link-color);
 		min-height: 3em;
 		font-size: 0.8em;
 	}
