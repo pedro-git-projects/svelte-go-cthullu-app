@@ -25,7 +25,7 @@
 			Bem vindo ao <b>Cthullu Online</b>, um site onde você
 			pode gerar investigadores para a sétima edição do jogo 
 			<i>Call of Cthullu</i> da Chaosium.			
-					
+
 		</div>
 	</div>
 </div>
@@ -34,9 +34,9 @@
 	<div class="row">
 		<div class="col text-center">
 			<button 
-	   			on:click="{goToCriar}"
-				type="button" 
-				class="btn btn-primary mt-3">Criar</button>
+	   on:click="{goToCriar}"
+	   type="button" 
+	class="btn btn-primary mt-3">Criar</button>
 		</div>
 	</div>
 </div>
@@ -48,3 +48,9 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	h1 { 
+		font-family: 'Macondo', cursive; 
+	}
+</style>
