@@ -204,6 +204,9 @@
 :global(.dark) .form-control:focus {
         border-color: #28a745;
         box-shadow: 0 0 0 0.2rem rgba(189, 147, 249, 0.5);
-    } 
+} 
 
+:global(.dark) .form-control {
+	background-color:#f8f8f2;
+}
 </style>

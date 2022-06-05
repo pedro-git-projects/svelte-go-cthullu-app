@@ -26,7 +26,8 @@
 	:global(body) {
 		background: var(--bg-color);
 		color: var(--text-color);
-		transition: background-color 0.3s
+		transition: background-color 0.3s;
+		font-family: 'Merriweather', serif;	
 	}
 
 	:global(body.dark) {
