@@ -3,20 +3,54 @@
 </svelte:head>
 
 <script>
-	// import * as yup from 'yup'
-
+	import { createForm } from "svelte-forms-lib"
 
 	let promise = Promise.resolve([])
 
-	let values = {
-		nome : '',
-		idade : '', 
-		residencia : '', 
-		nascimento : '' ,
-		ocupacao : '',
-	}	  
+	const { form, errors, handleChange, handleSubmit } = createForm({
+		initialValues: {
+			nome: '',
+			idade: '',
+			residencia: '',
+			nascimento: '',
+			ocupacao: '',
+		},
+		validate: values => {
+			let errs = {}
+			if(values.nome === "") {
+				errs["nome"] = "nome é um campo obrigatório"
+			}
 
-	function submitForm() {
+			if(values.idade=== "") {
+				errs["idade"] = "insira um número entre 1 e 99"
+			}
+
+			if(values.idade < 1 || values.idade > 99) {
+				errs["idade"] = "insira um número entre 1 e 99"
+			}
+
+			if(values.residencia === "") {
+				errs["residencia"] = "residencia é um campo obrigatório"
+			}		
+
+			if(values.nascimento === "") {
+				errs["nascimento"] = "nascimento é um campo obrigatório"
+			}
+
+			if(values.ocupacao === "") {
+				errs["ocupacao"] = "ocupacao é um campo obrigatório"
+			}		
+			return errs
+		},
+
+		onSubmit: values => {
+			console.log(values)
+			submitForm(values)
+		}
+	})
+
+
+	function submitForm(values) {
 		promise = fetchInvestigador(values)
 	}
 
@@ -43,34 +77,80 @@
 
 <h1>Criar Investigador</h1>
 <hr>
-<form on:submit|preventDefault={submitForm}>
+
+
+<form on:submit|preventDefault={handleSubmit}>
 
 	<div class="form-group">
 
-		<label for="nome"> <strong> Nome </strong> </label>
-		<input class="form-control" bind:value="{values.nome}" id="nome" name="nome" type="text" />
+		<label for="nome">Nome</label>
+		<input
+	  class="form-control"
+   			id="nome"
+   			name="nome"
+   			on:change={handleChange}
+   			bind:value={$form.nome}
+   />
+   {#if $errors.nome}
+	   <p class="error-alert">{$errors.nome}</p>
+   {/if}
 
-		<label for="idade"> <strong> Idade </strong> </label>
-		<input class="form-control" bind:value="{values.idade}" id="idade" name="idade" type="number" />
+   <label for="idade">Idade</label>
+   <input
+	   	class="form-control"
+		id="idade"
+ 		name="idade"
+ 		on:change={handleChange}
+ 		bind:value={$form.idade}
+ />
+ {#if $errors.idade}
+	 <p class="error-alert">{$errors.idade}</p>
+ {/if}
 
-		<label for="residencia"> <strong> Residência </strong> </label>
-		<input class="form-control" bind:value="{values.residencia}" id="residencia" name="residencia" type="text" />
+ <label for="residencia">Residência</label>
+ <input
+	 class="form-control"
+  id="residencia"
+  name="residencia"
+  on:change={handleChange}
+  bind:value={$form.residencia}
+  />
+  {#if $errors.residencia}
+	 <p class="error-alert">{$errors.residencia}</p>
+  {/if}
 
-		<label for="nascimento"> <strong> Nascimento </strong> </label>
-		<input class="form-control" bind:value="{values.nascimento}" id="nascimento" name="nascimento" type="text" />
+  <label for="nascimento">Nascimento</label>
+  <input
+	  class="form-control"
+   id="nascimento"
+   name="nascimento"
+   on:change={handleChange}
+   bind:value={$form.nascimento}
+   />
+   {#if $errors.nascimento}
+	 <p class="error-alert">{$errors.nascimento}</p>
+   {/if}
 
-		<label for="ocupacao"> <strong> Ocupação </strong> </label>
-		<input class="form-control" bind:value="{values.ocupacao}" id="ocupacao" name="ocupacao" type="text" />
-
+   <label for="ocupacao">Ocupação</label>
+   <input
+	   class="form-control"
+		id="ocupacao"
+ 		name="ocupacao"
+ on:change={handleChange}
+ bind:value={$form.ocupacao}
+ />
+ {#if $errors.ocupacao}
+	 <p class="error-alert">{$errors.ocupacao}</p>
+ {/if}
 	</div>
-	<br />
 
 	<div class="container">
 		<div class="row">
-			<div class="col text-center mb-4">
+			<div class="col text-center mt-4 mb-4">
 				<button class="btn btn-primary" type="submit">Criar!</button>
 			</div>
 		</div>
+
 	</div>
 </form>
 
@@ -78,6 +158,7 @@
 {#await promise}
 	<div></div>
 {:then caracteristicas}
+	<h2>Características</h2>
 	<table class="table table-light">
 		<thead>
 			<tr>
@@ -213,5 +294,25 @@
 
 	:global(.dark) .form-control {
 		background-color:#f8f8f2;
+	}
+
+	:global() .error-alert {
+		border: 1px solid #ebdbb2 !important;
+		padding: 6px;
+		text-align: center;
+		color: #ebdbb2;
+		background-color: #cc241d;
+		border-radius: 3px;
+		margin-top: 1em;
+	}
+
+	:global(.dark) .error-alert {
+		border: 1px solid #f8f8f2 !important;
+		padding: 6px;
+		text-align: center;
+		color: #f8f8f2;
+		background-color: #ff5555;
+		border-radius: 3px;
+		margin-top: 1em;
 	}
 </style>
