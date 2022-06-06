@@ -34,8 +34,8 @@
 		for(let item of cart) {
 			if(item.id === product.id) {
 				product.quantity += 1
-				cart = cart;
-				return;
+				cart = cart
+				return
 			}
 		}
 		cart = [...cart, product]
@@ -50,7 +50,7 @@
 				} else {
 					cart = cart.filter((cartItem) => cartItem != product)
 				}
-				return;
+				return
 			}
 		}
 	}
@@ -60,7 +60,7 @@
 			if(item.id === product.id) {
 				item.quantity += 1
 				cart = cart;
-				return;
+				return
 			}
 		}
 	}
@@ -237,23 +237,46 @@
 		color:#eceff4;
 	}
 
-:global(.dark) .card {
+	:global(.dark) .card {
 		background-color: #e5e9f0;
 		color:#eceff4;
-}
+	}
 
-:global(.dark) button {
-  		background-color: #bd93f9 !important;
-		border-color:#bd93f9 !important;
-}
+	:global(.dark) button {
+		background-color: #bd93f9;
+		border-color:#bd93f9;
+	}
 
-:global() h1 { 
+	:global() h1 { 
 		color:#98971a;
-}
+	}
 
-:global(.dark) h1 { 
+	:global(.dark) h1 { 
 		color:#50fa7b;
-}
+	}
 
+	:global() .btn-success {
+		background-color:#689d6a; 
+		border-color:#689d6a; 
+		color:#282828;
+	}
+
+	:global() .btn-danger {
+		background-color:#cc241d;
+		border-color:#cc241d; 
+		color:#282828;
+	}
+
+	:global(.dark) .btn-success {
+		background-color:#50fa7b; 
+		border-color:#50fa7b; 
+		color:#282a36;
+	}
+
+	:global(.dark) .btn-danger {
+		background-color:#ff5555;
+		border-color:#ff5555; 
+		color:#282a36;
+	}
 </style>
 

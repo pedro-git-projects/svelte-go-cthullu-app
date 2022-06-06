@@ -18,33 +18,32 @@
 		validate: values => {
 			let errs = {}
 			if(values.nome === "") {
-				errs["nome"] = "nome é um campo obrigatório"
+				errs["nome"] = "Nome é um campo obrigatório"
 			}
 
 			if(values.idade=== "") {
-				errs["idade"] = "insira um número entre 1 e 99"
+				errs["idade"] = "Insira um número entre 1 e 99"
 			}
 
 			if(values.idade < 1 || values.idade > 99) {
-				errs["idade"] = "insira um número entre 1 e 99"
+				errs["idade"] = "Insira um número entre 1 e 99"
 			}
 
 			if(values.residencia === "") {
-				errs["residencia"] = "residencia é um campo obrigatório"
+				errs["residencia"] = "Residência é um campo obrigatório"
 			}		
 
 			if(values.nascimento === "") {
-				errs["nascimento"] = "nascimento é um campo obrigatório"
+				errs["nascimento"] = "Nascimento é um campo obrigatório"
 			}
 
 			if(values.ocupacao === "") {
-				errs["ocupacao"] = "ocupacao é um campo obrigatório"
+				errs["ocupacao"] = "Ocupação é um campo obrigatório"
 			}		
 			return errs
 		},
 
 		onSubmit: values => {
-			console.log(values)
 			submitForm(values)
 		}
 	})
@@ -150,7 +149,6 @@
 				<button class="btn btn-primary" type="submit">Criar!</button>
 			</div>
 		</div>
-
 	</div>
 </form>
 
