@@ -72,7 +72,6 @@
 <hr>
 
 <div id="checkDiv" class="" style="display: none;"></div>
-<p>{isDark}</p>
 
 <p>
 	Este site é Open Source, licenciado sob a <strong>GLP3</strong> e seu código fonte está disponível <a href="https://github.com/pedro-git-projects/cthullu-online" target="blank"> aqui</a>.
@@ -85,7 +84,7 @@
 	O backend da aplicação foi escrito em Go e consiste em uma <strong>RESTful API</strong>. Esta API expõe dois endpoints:	
 </p>
 
-<table id="tabela" class="table table-light">
+<table id="tabela" class="{isDark === false ? 'table table-light' : 'table table-dark'} ">
 	<thead class="thead">
 		<tr>
 			<th scope="col">Método</th>

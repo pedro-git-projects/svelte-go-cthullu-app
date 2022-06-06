@@ -5,6 +5,13 @@
 <script>
 	import { createForm } from "svelte-forms-lib"
 
+	import { darkMode } from "../store" 
+
+	let isDark
+	darkMode.subscribe(valor => {
+		isDark = valor
+	})
+
 	let promise = Promise.resolve([])
 
 	const { form, errors, handleChange, handleSubmit } = createForm({
@@ -157,7 +164,7 @@
 	<div></div>
 {:then caracteristicas}
 	<h2>Características</h2>
-	<table class="table table-light">
+	<table class="{isDark === false ? 'table table-light' : 'table table-dark'}">
 		<thead>
 			<tr>
 				<th scope="col">Característica</th>
@@ -245,18 +252,18 @@
 	</table>
 	<br>
 	<h2> Descrição </h2>
-	<ul class="list-group list-group-flush">
+	<ul class="  list-group list-group-flush">
 		<li class="list-group-item 
-		bg-light 
+		{isDark === false ? 'bg-light' : 'bg-dark'}	
 		text-white">Força: {caracteristicas.investigator.description.str_description}</li>
 
-		<li class="list-group-item bg-light text-white">Aparência: {caracteristicas.investigator.description.app_description}</li>
-		<li class="list-group-item bg-light text-white">Constituição: {caracteristicas.investigator.description.con_description}</li>
-		<li class="list-group-item bg-light text-white">Inteligência: {caracteristicas.investigator.description.int_description}</li>
-		<li class="list-group-item bg-light text-white">Tamanho: {caracteristicas.investigator.description.siz_descrpition}</li>
-		<li class="list-group-item bg-light text-white">Poder: {caracteristicas.investigator.description.pow_description}</li>
-		<li class="list-group-item bg-light text-white">Educação: {caracteristicas.investigator.description.edu_description}</li>
-		<li class="list-group-item bg-light text-white">Destreza: {caracteristicas.investigator.description.dex_description}</li>
+		<li class="list-group-item {isDark === false ? 'bg-light' : 'bg-dark'} text-white">Aparência: {caracteristicas.investigator.description.app_description}</li>
+		<li class="list-group-item {isDark === false ? 'bg-light' : 'bg-dark'} text-white">Constituição: {caracteristicas.investigator.description.con_description}</li>
+		<li class="list-group-item {isDark === false ? 'bg-light' : 'bg-dark'} text-white">Inteligência: {caracteristicas.investigator.description.int_description}</li>
+		<li class="list-group-item {isDark === false ? 'bg-light' : 'bg-dark'} text-white">Tamanho: {caracteristicas.investigator.description.siz_descrpition}</li>
+		<li class="list-group-item {isDark === false ? 'bg-light' : 'bg-dark'} text-white">Poder: {caracteristicas.investigator.description.pow_description}</li>
+		<li class="list-group-item {isDark === false ? 'bg-light' : 'bg-dark'} text-white">Educação: {caracteristicas.investigator.description.edu_description}</li>
+		<li class="list-group-item {isDark === false ? 'bg-light' : 'bg-dark'} text-white">Destreza: {caracteristicas.investigator.description.dex_description}</li>
 	</ul>
 {:catch error}
 	<p style="color: red">{error.message}</p>
