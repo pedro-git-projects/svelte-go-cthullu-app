@@ -59,6 +59,10 @@
 		color:#50fa7b;
 	}
 
+	:global() button {
+		font-family: 'JMH Cthulhumbus UGalt1'; 
+	}
+
 	:global(.dark) button {
 		background-color: #bd93f9 !important;
 		border-color: #bd93f9 !important;

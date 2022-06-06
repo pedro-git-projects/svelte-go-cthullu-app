@@ -286,5 +286,9 @@
 		border-color:#ff5555; 
 		color:#282a36;
 	}
+
+	:global() button {
+		font-family: 'JMH Cthulhumbus UGalt1'; 
+	}
 </style>
 

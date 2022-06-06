@@ -321,4 +321,8 @@
 		border-radius: 3px;
 		margin-top: 1em;
 	}
+	
+	:global() button {
+		font-family: 'JMH Cthulhumbus UGalt1'; 
+	}
 </style>
