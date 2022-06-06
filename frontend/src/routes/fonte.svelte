@@ -4,6 +4,15 @@
 	import dracula from "svelte-highlight/styles/dracula"
 	import json from "svelte-highlight/languages/json"
 
+	import { darkMode } from "../store" 
+
+	/* isDark recebe o valor de darkMode da Store */
+	let isDark
+	darkMode.subscribe(valor => {
+		isDark = valor
+	})
+
+
 	let request = `{
 	"nome":"Pedro",
 	"idade":30,
@@ -51,11 +60,11 @@
 
 <svelte:head>
 	<title>Cthullhu Online - Fonte</title>
-	<!-- {#if } -->
-	{@html dracula}
-	<!-- {:else} -->
-	{@html gruvbox}
-	<!--{/if} -->
+	{#if isDark}
+		{@html dracula}
+	{:else}
+		{@html gruvbox}
+	{/if}
 </svelte:head>
 
 
@@ -63,6 +72,7 @@
 <hr>
 
 <div id="checkDiv" class="" style="display: none;"></div>
+<p>{isDark}</p>
 
 <p>
 	Este site é Open Source, licenciado sob a <strong>GLP3</strong> e seu código fonte está disponível <a href="https://github.com/pedro-git-projects/cthullu-online" target="blank"> aqui</a>.

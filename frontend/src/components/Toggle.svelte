@@ -1,7 +1,9 @@
 <script>
-	let darkMode = false;
+	import  { darkMode } from "../store" 
+
 	function toggle() {
-		darkMode = !darkMode
+		/* Atualiza o valor da store*/
+		darkMode.update( valor => !valor)
 
 		/* Muda o tema do corpo */
 		window.document.body.classList.toggle('dark')
