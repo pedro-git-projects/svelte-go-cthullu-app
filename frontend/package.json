@@ -21,6 +21,7 @@
     "@vime/core": "^5.3.1",
     "@vime/svelte": "^5.3.1",
     "i": "^0.3.7",
+    "svelte-forms-lib": "^2.0.1",
     "svelte-image-gallery": "^1.5.0",
     "yup": "^0.32.11"
   }
