@@ -1,9 +1,68 @@
+<script>
+	import Highlight from "svelte-highlight"
+	import gruvbox from "svelte-highlight/styles/gruvbox-dark-medium"
+	import dracula from "svelte-highlight/styles/dracula"
+	import json from "svelte-highlight/languages/json"
+
+	let request = `{
+	"nome":"Pedro",
+	"idade":30,
+	"residencia":"Boston",
+	"nascimento":"new york",
+	"ocupacao":"archeologist" 
+}  `
+
+	let response = `{
+	"investigator": {
+		"name": "Pedro",
+		"age": 30,
+		"residence": "Boston",
+		"birthplace": "new york",
+		"occupation": "archeologist",
+		"str": 75,
+		"con": 15,
+		"pow": 15,
+		"dex": 75,
+		"app": 45,
+		"siz": 80,
+		"int": 50,
+		"edu": 80,
+		"luck": 30,
+		"mp": 3,
+		"db": 3,
+		"build": 1,
+		"hp": 9,
+		"san": 15,
+		"mv": 7,
+		"description": {
+			"str_description": "average, for a human.",
+			"app_description": "ugly, possibly difigured due to injury or birth.",
+			"con_description": "weak health, you're prone to bouts of ill health, great propensity for feeling pain.",
+			"int_description": "average human intellect.",
+			"siz_descrpition": "very tall, strongly built, or obese (240lbs/150 kg).",
+			"pow_description": "weak-willed, easily dominated by those with a greater intellect or willpower.",
+			"edu_description": "degree level graduate.",
+			"dex_description": "fast, nimble and able to perform feats of fine manipulation."
+		}
+	}
+}`
+</script>
+
+
 <svelte:head>
 	<title>Cthullhu Online - Fonte</title>
+	<!-- {#if } -->
+	{@html dracula}
+	<!-- {:else} -->
+	{@html gruvbox}
+	<!--{/if} -->
 </svelte:head>
+
 
 <h1>Código Fonte</h1>
 <hr>
+
+<div id="checkDiv" class="" style="display: none;"></div>
 
 <p>
 	Este site é Open Source, licenciado sob a <strong>GLP3</strong> e seu código fonte está disponível <a href="https://github.com/pedro-git-projects/cthullu-online" target="blank"> aqui</a>.
@@ -41,12 +100,28 @@
 	A aplicação backend cria investigadores recebendo um <strong>POST</strong> contendo o nome, idade, residência  e ocupação do investigator em JSON do seguinte tipo:
 </p>
 
-<pre><code>{JSON1}</code></pre>
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<Highlight language={json} code={request} />
+		</div>
+	</div>
+</div>
+
 
 E responde também com JSON uma ficha de personagem como:
 
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<Highlight language={json} code={response} />
+		</div>
+	</div>
+</div>
 
-<pre><code>{JSON2}</code></pre>
+
+
 
 <h2>Go - Dependências</h2>
 
@@ -79,63 +154,21 @@ Foram utilizadas as seguintes bibliotecas:
 	<li>svelte-image-gallery</li>
 </ul>
 
-<script>
-	let JSON1 = `{
-	"nome":"Pedro",
-	"idade":30,
-	"residencia":"Boston",
-	"nascimento":"new york",
-	"ocupacao":"archeologist" 
-	}  `
 
-	let JSON2 = `{
-	"investigator": {
-		"name": "Pedro",
-		"age": 30,
-		"residence": "Boston",
-		"birthplace": "new york",
-		"occupation": "archeologist",
-		"str": 75,
-		"con": 15,
-		"pow": 15,
-		"dex": 75,
-		"app": 45,
-		"siz": 80,
-		"int": 50,
-		"edu": 80,
-		"luck": 30,
-		"mp": 3,
-		"db": 3,
-		"build": 1,
-		"hp": 9,
-		"san": 15,
-		"mv": 7,
-		"description": {
-			"str_description": "average, for a human.",
-			"app_description": "ugly, possibly difigured due to injury or birth.",
-			"con_description": "weak health, you're prone to bouts of ill health, great propensity for feeling pain.",
-			"int_description": "average human intellect.",
-			"siz_descrpition": "very tall, strongly built, or obese (240lbs/150 kg).",
-			"pow_description": "weak-willed, easily dominated by those with a greater intellect or willpower.",
-			"edu_description": "degree level graduate.",
-			"dex_description": "fast, nimble and able to perform feats of fine manipulation."
-		}
-	}
-}`
-</script>
 
 <style>
-:global() h1 { 
+	:global() h1 { 
 		color:#98971a;
-}
-:global() h2 { 
+	}
+	:global() h2 { 
 		color:#d79921;
-}
+	}
 
-:global(.dark) h1 { 
+	:global(.dark) h1 { 
 		color:#50fa7b;
-}
+	}
 
-:global(.dark) h2 { 
+	:global(.dark) h2 { 
 		color:#ff79c6;
-}</style>
+	}
+</style>
