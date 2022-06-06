@@ -51,8 +51,7 @@
 <style>
 
 	:global() h1 { 
-
-		font-family: 'Macondo', cursive; 
+		font-family: 'JMH Cthulhumbus UGalt1'; 
 		color:#98971a;
 	}
 

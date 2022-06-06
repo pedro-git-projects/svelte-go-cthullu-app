@@ -168,9 +168,11 @@ Foram utilizadas as seguintes bibliotecas:
 <style>
 	:global() h1 { 
 		color:#98971a;
+		font-family: 'JMH Cthulhumbus UGalt1'; 
 	}
 	:global() h2 { 
 		color:#d79921;
+		font-family: 'JMH Cthulhumbus UGalt1'; 
 	}
 
 	:global(.dark) h1 { 

@@ -277,6 +277,7 @@
 	}
 
 	:global() h1 { 
+		font-family: 'JMH Cthulhumbus UGalt1'; 
 		color:#98971a;
 	}
 	:global() h2 { 

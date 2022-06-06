@@ -68,7 +68,7 @@
 
 <style>
 	.navbar-brand {
-		font-family: 'Macondo', cursive;
+		font-family: 'JMH Cthulhumbus UGalt1'; 
 	}
 
 	
