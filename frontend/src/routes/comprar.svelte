@@ -3,6 +3,13 @@
 </svelte:head>
 
 <script>
+	import { darkMode } from "../store" 
+
+	let isDark
+	darkMode.subscribe(valor => {
+		isDark = valor
+	})
+
 	import prod1 from '../../static/produtos/prod3.jpg' 
 	import prod2 from '../../static/produtos/alone.png' 
 	import prod3 from '../../static/produtos/cults.png' 
@@ -195,7 +202,7 @@
 	<div class="cart-list">
 		{#each cart as item }
 			{#if item.quantity > 0}
-				<div class="card bg-light">
+				<div class="card {isDark === false ? 'bg-light' : 'bg-dark'}">
 					<div class="text-center">
 						<img style="width: 12em;" class="mb-2" src={item.image} alt={item.name}/>
 					</div>			
