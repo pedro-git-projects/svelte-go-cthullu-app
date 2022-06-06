@@ -85,7 +85,7 @@
 </script>
 
 <button class="ml-2" on:click={toggle}>
-	{#if darkMode }
+	{#if $darkMode }
 		<!-- emoji do sol  -->		
 		&#9728;&#65039; 	
 	{:else}
