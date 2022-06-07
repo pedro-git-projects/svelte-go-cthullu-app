@@ -66,22 +66,7 @@
 				lg[i].classList.add("bg-light") 
 			} 
 		}	
-
-		/* Muda o tema dos pontos do carrossel */
-		let d = document.getElementsByClassName('dot')
-		for (let i = 0; i < d.length; i++) {
-			if(d[i].classList.contains('bg-light')) {
-				d[i].classList.remove('bg-light')
-				d[i].classList.add('bg-dark')
-			} else {
-				d[i].classList.remove('bg-dark')
-				d[i].classList.add('bg-light')
-			}
-		}
-
-		/* Por serem objetos gerados dinâmicamente, 
-		o tema dos cards é alterado no próprio componente de forma global */
-	}
+}
 </script>
 
 <button class="ml-2" on:click={toggle}>

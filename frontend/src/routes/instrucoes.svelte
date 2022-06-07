@@ -4,8 +4,13 @@
 
 <script>
 	import { hslide } from '../components/Slider'	
-
 	import { onMount } from 'svelte'
+	import { darkMode } from "../store" 
+
+	let isDark
+	darkMode.subscribe(valor => {
+		isDark = valor
+	})
 
 	let isMounted = false
 	let video
@@ -103,7 +108,7 @@
 
 <div class="dots">
 	{#each slides as slide, i}
-		<button on:click={()=>changeSlide(i)} class="dot bg-dark" class:selected={cur == i}>{i+1}</button>
+		<button on:click={()=>changeSlide(i)} class="{isDark === false ? 'dot' : 'dot-dark'}" class:selected={cur == i}>{i+1}</button>
 	{/each}
 </div>
 
@@ -161,7 +166,17 @@
 	.dot {
 		width: 1rem;
 		height: 1rem;
-		background: #000;
+		background: #928374;
+		border-radius: 100%;
+		font-size: 0;
+		margin: 0.3rem;
+		opacity: 0.3;
+	}
+
+	.dot-dark {
+		width: 1rem;
+		height: 1rem;
+		background: #bd93f9;
 		border-radius: 100%;
 		font-size: 0;
 		margin: 0.3rem;
@@ -172,6 +187,9 @@
 		opacity: 1;
 	}
 
+	.dot-dark.selected {
+		opacity: 1;
+	}
 	.extra-outer-wrapper {
 		width: 80%;
 		margin: 0 auto;
