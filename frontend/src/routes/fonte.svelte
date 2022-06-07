@@ -74,7 +74,7 @@
 <div id="checkDiv" class="" style="display: none;"></div>
 
 <p>
-	Este site é Open Source, licenciado sob a <strong>GLP3</strong> e seu código fonte está disponível <a href="https://github.com/pedro-git-projects/cthullu-online" target="blank"> aqui</a>.
+	Este site é Open Source, licenciado sob a <strong>GLP3</strong> e seu código fonte está disponível <a href="https://github.com/pedro-git-projects/cthullu-online" target="blank"> <strong> aqui </strong></a>.
 	Ele consiste em uma aplicação full stack, databaseless com backend escrito em <strong>Go</strong> e frontend escrito utilizando <strong>Svelte</strong>. Além disso <strong>Bootstrap</strong> foi utilizado visando simplificar o desenvolvimento dos estilos do css. Por fim, o <strong>GNU Make</strong> foi utilizado para automatizar o processo de levantar o site.
 </p>
 
