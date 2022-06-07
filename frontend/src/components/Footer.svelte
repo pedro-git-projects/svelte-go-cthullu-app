@@ -11,5 +11,6 @@
 		color: var(--link-color);
 		min-height: 4em;
 		font-size: 0.8em;
+		font-family: 'JMH Cthulhumbus UGalt1'; 
 	}
 </style>
