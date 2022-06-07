@@ -70,7 +70,6 @@
 	.navbar-brand {
 		font-family: 'JMH Cthulhumbus UGalt1'; 
 	}
-
 	
 	:global(a) {
 		color: var(--link-color);
