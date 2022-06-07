@@ -25,125 +25,125 @@ func (i *Investigator) SetDescription() {
 func (i *Investigator) strenghtDescription() {
 	switch i.Str >= 0 {
 	case i.Str >= 0 && i.Str < 15:
-		i.Description.StrDescription = "enfeebled: unable to even stand up of lift a cup of tea."
+		i.Description.StrDescription = "debilitado: incapaz de levantar-se ou levantar uma xícara de chá."
 	case i.Str >= 15 && i.Str < 50:
-		i.Description.StrDescription = "puny, weak."
+		i.Description.StrDescription = "insignificante, fraco."
 	case i.Str >= 50 && i.Str < 90:
-		i.Description.StrDescription = "average, for a human."
+		i.Description.StrDescription = "mediana, para um humano."
 	case i.Str >= 90 && i.Str < 99:
-		i.Description.StrDescription = "certainly one of the strongest people most met."
+		i.Description.StrDescription = "certamente uma das pessoas mais fortes que a maioria conheceu."
 	case i.Str >= 99:
-		i.Description.SizDescription = "world class. You represent the peak of the human strengh."
+		i.Description.SizDescription = "de nível mundial. Representa o ápice da força humana."
 	}
 }
 
 func (i *Investigator) appearenceDescription() {
 	switch i.App >= 0 {
 	case i.App >= 0 && i.App < 15:
-		i.Description.AppDescription = "so unsightly others are affected by fear, revulsion or pity."
+		i.Description.AppDescription = "tão repugnante que outros sofrem com medo, revolta ou pena."
 	case i.App >= 15 && i.App < 50:
-		i.Description.AppDescription = "ugly, possibly difigured due to injury or birth."
+		i.Description.AppDescription = "feio, possivelmente desfigurado por conta de um acidente ou nascença."
 	case i.App >= 50 && i.App < 90:
-		i.Description.AppDescription = "average."
+		i.Description.AppDescription = "média."
 	case i.App >= 90 && i.App < 99:
-		i.Description.AppDescription = "naturally magnetic, one of the most beautiful people most will meet."
+		i.Description.AppDescription = "naturalmente magnético, uma das pessoas mais bonitas que a maioria conhecerá."
 	case i.App >= 99:
-		i.Description.AppDescription = "the height of glamour and cool, probably a supermodel or film star. Human limit."
+		i.Description.AppDescription = "o auge do glamour e cool, provavelmente uma supermodelo ou estrela de cinema. Limite humano."
 	}
 }
 
 func (i *Investigator) constitutionDescription() {
 	switch i.Con >= 0 {
 	case i.Con == 0:
-		i.Description.ConDescription = "dead."
+		i.Description.ConDescription = "morto."
 	case i.Con >= 0 && i.Con < 15:
-		i.Description.ConDescription = "sickly, prone to prolonged illness and probably unable to operate without assistance."
+		i.Description.ConDescription = "doente, propenso a mazelas prolongadas e provavelmente incapaz de operar sem assistência."
 	case i.Con >= 15 && i.Con < 50:
-		i.Description.ConDescription = "weak health, you're prone to bouts of ill health, great propensity for feeling pain."
+		i.Description.ConDescription = "saúde fraca, você está propenso a crises de saúde, assim como  sentir dor."
 	case i.Con >= 50 && i.Con < 90:
-		i.Description.ConDescription = "average health."
+		i.Description.ConDescription = "saúde mediana."
 	case i.Con >= 90 && i.Con < 99:
-		i.Description.ConDescription = "shrugs off colds, hardy and hale."
+		i.Description.ConDescription = "robusto e resistente, ignora resfriados."
 	case i.Con >= 99:
-		i.Description.ConDescription = "iron constitution, able to withstand great amounts of pain."
+		i.Description.ConDescription = "saúde de ferro, capaz de suportar muita dor."
 	}
 }
 
 func (i *Investigator) intelligenceDescription() {
 	switch i.Int >= 0 {
 	case i.Int == 0:
-		i.Description.IntDescription = "no intellect. Unable to comprehend the world around you."
+		i.Description.IntDescription = "sem intelecto. Incapaz de compreender o mundo ao seu redor."
 	case i.Int >= 1 && i.Int < 50:
-		i.Description.IntDescription = "slow learner, able to undertake only the most basic math, or read beginner-level books."
+		i.Description.IntDescription = "aprendizado lento,  capaz de realizar apenas a matemática mais básica, ou ler livros de nível iniciante."
 	case i.Int >= 50 && i.Int < 90:
-		i.Description.IntDescription = "average human intellect."
+		i.Description.IntDescription = "intelecto humano médio."
 	case i.Int >= 90 && i.Int < 99:
-		i.Description.IntDescription = "quick-witted, probably able to comprehend multiple languages or theorems."
+		i.Description.IntDescription = "perspicaz, provavelmente capaz de compreender vários idiomas ou teoremas."
 	case i.Int >= 99:
-		i.Description.IntDescription = "genius, comparable to Tesla. This is the limit of the human intellect."
+		i.Description.IntDescription = "genial, comparável ao Tesla. Limite do intelecto humano."
 	}
 }
 
 func (i *Investigator) sizeDescription() {
 	switch i.Siz >= 0 {
 	case i.Siz == 1:
-		i.Description.SizDescription = "baby (1 - 12lbs)."
+		i.Description.SizDescription = "bebê (1 - 12lbs)."
 	case i.Siz > 1 && i.Siz <= 15:
-		i.Description.SizDescription = "child or someone of very short stature, like a dwarf.(33lbs/15kg)."
+		i.Description.SizDescription = "criança ou alguém de estatura muito baixa, como um anão (33lbs/15kg)."
 	case i.Siz > 15 && i.Siz <= 65:
-		i.Description.SizDescription = "average human size (moderate weight and height) (170lbs/75kg)."
+		i.Description.SizDescription = "tamanho humano médio (peso e altura moderados) (170lbs/75kg)."
 	case i.Siz > 65 && i.Siz <= 80:
-		i.Description.SizDescription = "very tall, strongly built, or obese (240lbs/150 kg)."
+		i.Description.SizDescription = "muito alto, forte, ou obeso (240lbs/150 kg)."
 	case i.Siz > 80 && i.Siz <= 99:
-		i.Description.SizDescription = "oversized in some aspect (330lbs/150kg)."
+		i.Description.SizDescription = "superdimensionado em algum aspecto (330lbs/150kg)."
 	}
 }
 
 func (i *Investigator) powerDescription() {
 	switch i.Pow >= 0 {
 	case i.Pow == 0:
-		i.Description.PowDescription = "enfeebled minded, no willpower, no magical potential."
+		i.Description.PowDescription = "mente debilitada, sem força de vontade ou potencial mágico."
 	case i.Pow >= 1 && i.Pow <= 15:
-		i.Description.PowDescription = "weak-willed, easily dominated by those with a greater intellect or willpower."
+		i.Description.PowDescription = "de vontade fraca, facilmente dominado por aqueles com maior intelecto ou força de vontade.."
 	case i.Pow > 15 && i.Pow <= 90:
-		i.Description.PowDescription = "strong willed, driven, a high potential to connect with the unseen and magical."
+		i.Description.PowDescription = "forte determinação, um alto potencial para se conectar com o invisível e mágico."
 	case i.Pow == 100:
-		i.Description.PowDescription = "iron willed, you have an strong connection to the spiritual 'realm' or the unseen world."
+		i.Description.PowDescription = "vontade de ferro, você tem uma forte conexão com o 'reino' espiritual ou o mundo invisível."
 	}
 }
 
 func (i *Investigator) dexDescription() {
 	switch i.Dex >= 0 {
 	case i.Dex == 0:
-		i.Description.DexDescription = "unable to move without assistance."
+		i.Description.DexDescription = "incapaz de se mover sem ajuda."
 	case i.Dex > 0 && i.Dex <= 15:
-		i.Description.DexDescription = "slow, clumsy with poor motor skills for fine manipulation."
+		i.Description.DexDescription = "lento, desajeitado com habilidades motoras pobres para manipulação fina."
 	case i.Dex > 15 && i.Dex <= 50:
-		i.Description.DexDescription = "average human dexterity."
+		i.Description.DexDescription = "destreza humana média."
 	case i.Dex > 50 && i.Dex <= 90:
-		i.Description.DexDescription = "fast, nimble and able to perform feats of fine manipulation."
+		i.Description.DexDescription = "rápido, ágil e capaz de realizar proezas de manipulação fina."
 	case i.Dex > 90 && i.Dex <= 99:
-		i.Description.DexDescription = "world class athlete. Human maximum."
+		i.Description.DexDescription = "atleta de classe mundial. Máximo humano."
 	}
 }
 
 func (i *Investigator) educationDescription() {
 	switch i.Edu >= 0 {
 	case i.Edu == 0:
-		i.Description.EduDescription = "new born baby."
+		i.Description.EduDescription = "recém nascido."
 	case i.Edu >= 1 && i.Edu <= 15:
-		i.Description.EduDescription = "completely uneducated in every way."
+		i.Description.EduDescription = "completamente ignorante em todos os sentidos."
 	case i.Edu > 15 && i.Edu <= 60:
-		i.Description.EduDescription = "high school graduate."
+		i.Description.EduDescription = "ensino médio completo."
 	case i.Edu > 60 && i.Edu <= 70:
-		i.Description.EduDescription = "college graduate."
+		i.Description.EduDescription = "ensino superior completo."
 	case i.Edu > 70 && i.Edu <= 80:
-		i.Description.EduDescription = "degree level graduate."
+		i.Description.EduDescription = "mestre."
 	case i.Edu > 80 && i.Edu <= 90:
-		i.Description.EduDescription = "doctorate, professor."
+		i.Description.EduDescription = "doutor, professor."
 	case i.Edu > 90 && i.Edu <= 96:
-		i.Description.EduDescription = "world class authority in your field of study."
+		i.Description.EduDescription = "autoridade mundial em algum campo de estudo."
 	case i.Edu > 96:
-		i.Description.EduDescription = "reached the peak of human education."
+		i.Description.EduDescription = "atingiu o ápice da educação humana."
 	}
 }
