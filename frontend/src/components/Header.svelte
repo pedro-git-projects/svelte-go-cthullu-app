@@ -77,12 +77,17 @@
 	}
 
 	:global(a:hover) {
-		color: var(--link-color);
+		color: #d79921;
 		text-decoration: none;
 	}
 
 	:global(a.dark) {
 		color: #f8f8f2;
+		text-decoration: none;
+	}
+
+	:global(a.dark:hover) {
+		color: #ff79c6;
 		text-decoration: none;
 	}
 
