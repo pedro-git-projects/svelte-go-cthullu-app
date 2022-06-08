@@ -94,6 +94,7 @@
 	  class="form-control"
    			id="nome"
    			name="nome"
+	  		placeholder="Nome do investigador"
    			on:change={handleChange}
    			bind:value={$form.nome}
    />
@@ -106,6 +107,7 @@
 	   	class="form-control"
 		id="idade"
  		name="idade"
+	  	placeholder="1-99"
  		on:change={handleChange}
  		bind:value={$form.idade}
  />
@@ -118,6 +120,7 @@
 	 class="form-control"
   id="residencia"
   name="residencia"
+  placeholder="Cidade de residência"
   on:change={handleChange}
   bind:value={$form.residencia}
   />
@@ -128,8 +131,9 @@
   <label for="nascimento">Nascimento</label>
   <input
 	  class="form-control"
-   id="nascimento"
-   name="nascimento"
+	  id="nascimento"
+   	  name="nascimento"
+   	  placeholder="Local de nascimento"
    on:change={handleChange}
    bind:value={$form.nascimento}
    />
@@ -142,6 +146,7 @@
 	   class="form-control"
 		id="ocupacao"
  		name="ocupacao"
+   		placeholder="Ocupação, ex: arqueólogo"
  on:change={handleChange}
  bind:value={$form.ocupacao}
  />
