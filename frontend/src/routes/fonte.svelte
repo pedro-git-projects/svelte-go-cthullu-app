@@ -84,7 +84,7 @@
 	O backend da aplicação foi escrito em Go e consiste em uma <strong>RESTful API</strong>. Esta API expõe dois endpoints:	
 </p>
 
-<table id="tabela" class="{isDark === false ? 'table table-light' : 'table table-dark text-white'} ">
+<table id="tabela" class=" shadow {isDark === false ? 'table table-light' : 'table table-dark text-white'} ">
 	<thead class="thead">
 		<tr>
 			<th scope="col">Método</th>

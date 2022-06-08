@@ -4,7 +4,7 @@
 </script>
 
 <header>
-	<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav id="nav" class="navbar shadow-sm navbar-expand-lg navbar-light bg-light">
 		<div class="container-fluid">
 			<div class="navbar-brand">
 				<a sveltekit:prefetch href="/">Cthullu Online</a>

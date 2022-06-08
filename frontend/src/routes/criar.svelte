@@ -169,7 +169,7 @@
 	<div></div>
 {:then caracteristicas}
 	<h2>Características</h2>
-	<table class="{isDark === false ? 'table table-light' : 'table table-dark'}">
+	<table shadow class="{isDark === false ? 'table table-light' : 'table table-dark'}">
 		<thead>
 			<tr>
 				<th scope="col">Característica</th>
@@ -258,7 +258,7 @@
 	<br>
 	<h2> Descrição </h2>
 	<ul class="  list-group list-group-flush">
-		<li class="list-group-item 
+		<li class="shadow list-group-item 
 		{isDark === false ? 'bg-light' : 'bg-dark'}	
 		text-white">Força: {caracteristicas.investigator.description.str_description}</li>
 
@@ -334,4 +334,10 @@
 	:global(.dark) button:hover {
 		box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);		
 	}
+
+	:global(.dark) button:focus{
+		border:#bd93f9;
+		box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);		
+	}
+	
 </style>
