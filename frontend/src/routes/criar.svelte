@@ -36,6 +36,10 @@
 				errs["idade"] = "Insira um número entre 1 e 99"
 			}
 
+			if( isNaN(values.idade)) {
+				errs["idade"] = "Insira um número entre 1 e 99"
+			}
+
 			if(values.residencia === "") {
 				errs["residencia"] = "Residência é um campo obrigatório"
 			}		
